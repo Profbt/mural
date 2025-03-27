@@ -7,13 +7,12 @@
     <meta name="theme-color" content="#0066cc">
     <link rel="manifest" href="manifest.json">
     <script>
-        // Registra o Service Worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js');
-        }
+        // Redireciona SEM manter a URL do PWA
+        window.location.replace("https://www.registropontoseed.pr.gov.br");
     </script>
 </head>
 <body>
-    <!-- Página vazia (será substituída pelo SW) -->
+    <!-- Fallback caso o JavaScript falhe -->
+    <p>Redirecionando... <a href="https://www.registropontoseed.pr.gov.br">Clique aqui</a>.</p>
 </body>
 </html>
