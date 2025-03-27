@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mural do Professor Vicente Rijo</title>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#CCDAC1">
+  <link rel="icon" href="/icons/icon-192x192.png">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <iframe src="https://sites.google.com/escola.pr.gov.br/muraldoprofessorvicenterijo" title="Mural do Professor Vicente Rijo"></iframe>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then((registration) => {
+          console.log('Service Worker registrado com sucesso:', registration);
+        })
+        .catch((error) => {
+          console.log('Falha no registro do Service Worker:', error);
+        });
+    }
+  </script>
+</body>
+</html>
