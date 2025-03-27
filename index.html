@@ -7,12 +7,13 @@
     <meta name="theme-color" content="#0066cc">
     <link rel="manifest" href="manifest.json">
     <script>
-        // Redireciona imediatamente para o site original
-        window.location.href = "https://www.registropontoseed.pr.gov.br";
+        // Registra o Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
     </script>
 </head>
 <body>
-    <!-- Fallback caso o JavaScript esteja desativado -->
-    <p>Carregando Ponto... <a href="https://www.registropontoseed.pr.gov.br">Clique aqui</a> se não for redirecionado.</p>
+    <!-- Página vazia (será substituída pelo SW) -->
 </body>
 </html>
